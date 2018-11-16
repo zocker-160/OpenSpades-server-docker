@@ -11,6 +11,8 @@ RUN git clone https://github.com/NateShoffner/PySnip
 WORKDIR /PySnip
 RUN ./build.sh
 
+VOLUME ["/PySnip/feature_server"]
+
 EXPOSE 32887
 
 CMD screen ./run_server.sh
