@@ -4,7 +4,7 @@ MAINTAINER zocker-160
 
 RUN \
 	apt-get update \
-	&& apt-get install -y python-pip unzip \
+	&& apt-get install -y python-pip unzip wget \
 	&& pip install cython twisted jinja2 pillow pygeoip pycrypto pyasn1
 
 RUN wget https://github.com/NateShoffner/PySnip/archive/master.zip -O PySnip.zip
