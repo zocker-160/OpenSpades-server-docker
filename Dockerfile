@@ -1,18 +1,19 @@
-FROM debian:stretch-slim
+FROM debian:stable-slim
 
 MAINTAINER zocker-160
 
 RUN \
 	apt-get update \
-	&& apt-get install -y git python-pip screen \
+	&& apt-get install -y python-pip unzip \
 	&& pip install cython twisted jinja2 pillow pygeoip pycrypto pyasn1
 
-RUN git clone https://github.com/NateShoffner/PySnip
-WORKDIR /PySnip
+RUN wget https://github.com/NateShoffner/PySnip/archive/master.zip -O PySnip.zip
+RUN unzip PySnip.zip && rm PySnip.zip
+WORKDIR /PySnip-master
 RUN ./build.sh
 
-VOLUME ["/PySnip/feature_server"]
+VOLUME ["/PySnip-master/feature_server"]
 
 EXPOSE 32887
 
-CMD screen ./run_server.sh
+CMD ./run_server.sh
