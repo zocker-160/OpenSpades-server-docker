@@ -26,7 +26,7 @@ docker attach OpenSpades-Server
 ```
 
 **important:**
-in order to detach from the server terminal press: `Ctrl`+`p` + `Ctrl`+`q` (*`Ctrl`+`c` will stop the server)*
+in order to detach from the server terminal press: `Ctrl`+`p` and `Ctrl`+`q` (*`Ctrl`+`c` will stop the server)*
 
 #### The public server list can be found [here](https://www.buildandshoot.com/servers/).
 
