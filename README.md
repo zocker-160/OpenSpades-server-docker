@@ -13,7 +13,7 @@ zocker160/openspades-server:latest
 ## Usage
 
 - `-p 32887:32887` OS game server port (default 32887)
-- (*optional) *`-v <insert/path/here>:/PySnip/feature_server:rw` The location to store all your permanent files (logs, config and more)
+- *(optional)* `-v <insert/path/here>:/PySnip/feature_server:rw` The location to store all your permanent files (logs, config and more)
 
 #### Additional parameters:
 
