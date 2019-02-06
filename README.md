@@ -5,16 +5,15 @@ This docker image is based on the [PySnip](https://github.com/NateShoffner/PySni
 To start the docker image run:
 
 ```
-docker run -t \
+docker run -it \
  --name "OpenSpades-Server" \
  -p 32887:32887 \
- -v <insert/path/here>:/PySnip/feature_server:rw \
 zocker160/openspades-server:latest
 ```
 ## Usage
 
-- `-p 32887:32887` LMP game server port (default 32887)
-- `-v <insert/path/here>:/PySnip/feature_server:rw` The location to store all your permanent files (logs, config and more)
+- `-p 32887:32887` OS game server port (default 32887)
+- (*optional) *`-v <insert/path/here>:/PySnip/feature_server:rw` The location to store all your permanent files (logs, config and more)
 
 #### Additional parameters:
 
@@ -23,13 +22,11 @@ zocker160/openspades-server:latest
 #### Get into the server terminal
 
 ```
-docker exec -it OpenSpades-Server /bin/bash
-
-$ screen -x
+docker attach OpenSpades-Server
 ```
 
-**important: in order to exit the server terminal you have to detatch the screen session first by pressing `Ctrl`+`a` and then `d`;**
-**`Ctrl`+`c` will stop the server.**
+**important:**
+in order to detach from the server terminal press: `Ctrl`+`p` + `Ctrl`+`q` (*`Ctrl`+`c` will stop the server)*
 
 #### The public server list can be found [here](https://www.buildandshoot.com/servers/).
 
